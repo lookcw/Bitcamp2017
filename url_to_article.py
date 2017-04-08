@@ -1,6 +1,10 @@
 import csv
 import newspaper
 from newspaper import Article
+import sys
+
+csv.field_size_limit(sys.maxsize)
+
 
 
 def get_article(url):
@@ -18,17 +22,16 @@ def get_urls(col,input_file,output_file,delim,cate):
 	n=0
 	for line in url_reader:
 		print line[col]
-		if n%30==0:
+		if n%1==0:
 			try:	
 				url = line[col]
 				headlines_writer.writerow([url,cate])
 			except:
 				print "not found"
-		n=(n+1)%30
-
-get_urls(1,"url_data/real/newsCorpora.csv","newsCorpora_headlines.csv","\t","real")
+		n=(n+1)%2
+#get_urls(1,"url_data/real/newsCorpora.csv","newsCorpora_headlines.csv","\t","real")
 #get_urls(1,"url_data/real/newsCorpora.csv","newsCorpora_headlines.txt","\t")
-#get_urls(3,"url_data/real/2pageSessions.csv","2pageSessionsArticles.txt","\t")
+get_urls(4,"url_data/fake/fake.csv","fake.csv",",","fake")
 
 
 
