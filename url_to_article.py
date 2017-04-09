@@ -23,7 +23,7 @@ def get_urls(col,input_file,output_file,delim,cate):
 	for line in url_reader:
 		print line[col]
 		if n%60==1:
-			try:	
+			try:
 				url = line[col].replace(',',' ')
 				if url:
 					headlines_writer.writerow([url,cate])
