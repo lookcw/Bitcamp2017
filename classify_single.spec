@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['classify_single.py'],
-             pathex=['/Users/smadan/Documents/Bitcamp2017'],
+             pathex=['/home/lookcw/Documents/Bitcamp2017'],
              binaries=[],
              datas=[],
              hiddenimports=[],

@@ -1,6 +1,7 @@
 import csv
 import json
 import pymsgbox
+import Tkinter
 from watson_developer_cloud import NaturalLanguageClassifierV1
 
 pymsgbox.alert('Welcome to Faux News', 'Title')
