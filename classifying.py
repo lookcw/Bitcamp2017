@@ -1,5 +1,6 @@
 import csv
 import json
+from easygui import msgbox
 from watson_developer_cloud import NaturalLanguageClassifierV1
 
 test = open("test_set.csv", "r")
